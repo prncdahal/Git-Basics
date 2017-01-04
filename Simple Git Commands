@@ -1,0 +1,69 @@
+Git: Very Basic Commands
+
+ 
+Here are some very basic git commands. They are very useful for git beginners.
+
+Here is the step-by-step guide:
+
+Go to any folder where you want to create local copy of your repository
+
+cd /path/to/your/directory
+
+Create a working copy of a local repository
+
+git clone /path/to/repository
+
+For remove server:
+git clone username@host:/path/to/repository
+
+For example, if you want to checkout github repo then you can do:
+
+git clone https://github.com/anyUsername/my-repo-name.git
+
+Now, your local copy will be created in the folder named ‘my-repo-name‘.
+
+You can now go to that folder and try all the git commands (check status; add, commit & push changes, etc.).
+
+Check status of your repository
+
+This will list files that are changed which you might want/need to add or commit.
+
+git status
+
+In git tree, there are three areas:
+
+– First one is the Working directory.
+
+– The second one is the Index which acts as a staging area. When you run ‘git add‘ command, files/changes are added to this area.
+
+– The third one is Head. You have to run ‘git commit‘ command to move files/changes to this area. Head is still your local working copy.
+
+– Your changes in files are not yet moved to your remote repository. To move your changes to remote repository, you need to execute ‘git push‘ command.
+
+Add files to Index (staging area)
+
+git add -A (add all)
+git add path/to/filename (single file)
+git add path/ (directory)
+
+Commit changes to head (but not yet to the remote repository)
+
+git commit -m “Commit message”
+
+Commit all files:
+git commit -m “Commit message” -a
+
+Send changes to the master branch of your remote repository
+
+git push origin master
+
+Fetch and merge changes on the remote server to your working directory
+
+git pull
+
+I have not included about branching, tagging & logging over here.
+You can find out more at Basic Git Commands(https://confluence.atlassian.com/display/STASH/Basic+Git+commands) and git – the simple guide(http://rogerdudler.github.io/git-guide/).
+
+Hope this helps.
+Thanks.
+
